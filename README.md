@@ -75,7 +75,7 @@ When `score/<model>_quality_evaluation_scored.jsonl` has missing items, this scr
    - `desc`: case profile + disease description
 2. **Dialogue result format**: `src/result_<model>.jsonl` stores per-case outputs:
    ```json
-   {"name":"<disease>","final_answer":"<diagnosis>","turns":<int>,"positive_findings":<int>,"negative_findings":<int>,"chat_history":"<full dialogue text>"}
+   {"name":"<disease>","final_answer":"<diagnosis>","turns":"<int>","positive_findings":"<int>","negative_findings":"int","chat_history":"<full dialogue text>"}
    ```
 3. **Evaluation artifacts**:  
    - `eval/score/` contains 7-dimension scores.  
