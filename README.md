@@ -1,26 +1,20 @@
 <div align="center">
 
-<h1 align="center"> ClinDEF: A Dynamic Evaluation Framework for Large Language Models in
-Clinical Reasoning  </h1>
+<h1 align="center"> ClinMAS: A Knowledge-Grounded Multi-Agent Simulation Framework for Evaluating Clinical Reasoning in LLMs  </h1>
 
 <div align=center><img src="figure/overview.png" width="90%" height="100%" /></div>
 
 <p></p>
 </div>
 
-**ClinDEF** is a dynamic framework for assessing clinical reasoning in large language models (LLMs) through simulated multi-turn doctor-patient diagnostic dialogues. Unlike existing evaluation paradigms primarily rely on static benchmarks, ClinDEF models diagnosis as an interactive process involving hypothesis generation, information gathering, test justification, and differential revision. By integrating disease knowledge graphs with a multi-agent dialogue environment, ClinDEF enables contamination-resistant case generation and process-aware evaluation across accuracy, efficiency, and reasoning quality. Its fine-grained, rubric-based assessment exposes clinically meaningful reasoning gaps in state-of-the-art LLMs, providing a robust and scalable paradigm for advancing reliable clinical AI evaluation.
+**ClinMAS** is a dynamic framework for assessing clinical reasoning in large language models (LLMs) through simulated multi-turn doctor-patient diagnostic dialogues. Unlike existing evaluation paradigms primarily rely on static benchmarks, ClinMAS models diagnosis as an interactive process involving hypothesis generation, information gathering, test justification, and differential revision. By integrating disease knowledge graphs with a multi-agent dialogue environment, ClinMAS enables contamination-resistant case generation and process-aware evaluation across accuracy, efficiency, and reasoning quality. Its fine-grained, rubric-based assessment exposes clinically meaningful reasoning gaps in state-of-the-art LLMs, providing a robust and scalable paradigm for advancing reliable clinical AI evaluation.
 
 <h3 id="3.1">🔧 Installation</h3>
 
-First clone the repository:
+Set up a conda environment:
 ```bash
-git clone https://github.com/HICAI-ZJU/ClinDEF
-```
-
-Next, set up a conda environment:
-```bash
-conda create -n ClinDEF python=3.10.9
-conda activate ClinDEF
+conda create -n ClinMAS python=3.10.9
+conda activate ClinMAS
 ```
 Then, install the dependencies using pip:
 ```bash
@@ -84,15 +78,3 @@ When `score/<model>_quality_evaluation_scored.jsonl` has missing items, this scr
 4. **Model access**: Set `OPENAI_API_BASE` / `OPENAI_API_KEY`, `DASHSCOPE_API_BASE` / `DASHSCOPE_API_KEY`, and `MODELSCOPE_API_BASE` / `MODELSCOPE_API_KEY` as needed (different models may use different API KEY providers).
 
 
-<h2 id="6">📝 Citation</h2>
-
-If you use ClinDEF in your research, please cite our paper:
-
-```
-@article{tang2025clindef,
-  title={ClinDEF: A Dynamic Evaluation Framework for Large Language Models in Clinical Reasoning},
-  author={Tang, Yuqi and Yu, Jing and Su, Zichang and Feng, Kehua and Zhu, Zhihui and Wang, Libin and Liang, Lei and Zhang, Qiang and Ding, Keyan and Chen, Huajun},
-  journal={arXiv preprint arXiv:2512.23440},
-  year={2025}
-}
-```
